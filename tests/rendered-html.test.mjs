@@ -18,7 +18,7 @@ test("server-renders the Everward landing page", async () => {
   assert.match(html, /Everward \| HVAC Lead Generation/);
   assert.match(html, /More qualified HVAC replacement opportunities\./);
   assert.match(html, /From ad click to estimate opportunity\./);
-  assert.match(html, /mailto:hello@everward\.ca\?subject=Everward%20intro%20call/);
+  assert.match(html, /https:\/\/calendar\.app\.google\/sqs2iTmTbKPKM2gf9/);
   assert.doesNotMatch(html, /testimonial|guarantee|revenue|case stud/i);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });

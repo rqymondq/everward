@@ -4,7 +4,7 @@ Production one-page website for Everward, a residential HVAC lead-generation par
 
 ## Booking link
 
-Every **Book a Call** button reads from `NEXT_PUBLIC_BOOKING_URL` in `lib/site-config.ts`. Copy `.env.example` to `.env.local` and add the GoHighLevel calendar URL or `https://book.everward.ca` when it is available. Until then, the site falls back to an email introduction link.
+Every **Book a Call** button reads from `NEXT_PUBLIC_BOOKING_URL` in `lib/site-config.ts`. The production fallback is the current Google Calendar booking page; a hosted environment value can replace it later without changing the buttons individually.
 
 ## Local development
 
