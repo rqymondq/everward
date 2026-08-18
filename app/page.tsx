@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import { BOOKING_URL } from "@/lib/site-config";
 
-const heroStages = ["Meta ads", "Homeowner", "Qualified", "Follow-up", "Estimate"];
+const heroStages = ["Incoming call", "AI answers", "Qualify", "Book", "Notify"];
 const process = [
-  { number: "01", name: "Attract", text: "Reach local homeowners through focused Meta advertising." },
-  { number: "02", name: "Qualify", text: "Capture location, project type, home status and timing." },
-  { number: "03", name: "Follow up", text: "Start the conversation quickly with automated SMS follow-up." },
-  { number: "04", name: "Book", text: "Move qualified homeowners toward an estimate with your team." },
+  { number: "01", name: "Answer", text: "A natural-sounding AI receptionist picks up when your team cannot." },
+  { number: "02", name: "Qualify", text: "Collect the homeowner, location, job type and urgency details you need." },
+  { number: "03", name: "Book", text: "Offer available times and add the appointment directly to your calendar." },
+  { number: "04", name: "Notify", text: "Send your team the appointment details and a clear summary of the call." },
 ];
-const everwardHandles = ["Meta advertising", "Landing pages & lead capture", "Homeowner qualification", "CRM infrastructure", "Automated SMS follow-up", "Instant lead notifications", "Estimate booking system", "Campaign monitoring & optimization"];
+const everwardHandles = ["Missed-call answering", "After-hours answering", "Natural voice conversations", "Homeowner qualification", "Basic job qualification", "Calendar availability checks", "Appointment booking", "Team notifications"];
 
 function BookingLink({ className = "button", label = "Book a call" }: { className?: string; label?: string }) {
   return <a className={className} href={BOOKING_URL} target="_blank" rel="noopener noreferrer">{label}<span aria-hidden="true">↗</span></a>;
@@ -33,62 +33,62 @@ export default function Home() {
 
       <section className="hero section-shell" id="top">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> Residential HVAC growth systems</p>
-          <h1>More qualified HVAC replacement opportunities.</h1>
-          <p className="hero-lede">Everward helps residential HVAC companies find and qualify local homeowners looking for furnace, AC, heat-pump and full-system replacements.</p>
-          <div className="hero-actions"><BookingLink /><p>Advertising · Qualification · Follow-up · Booking</p></div>
+          <p className="eyebrow"><span /> AI receptionist for residential HVAC</p>
+          <h1>Turn missed HVAC calls into booked appointments.</h1>
+          <p className="hero-lede">Everward answers missed and after-hours calls, qualifies the homeowner and job, books the appointment and lets your team know what happened.</p>
+          <div className="hero-actions"><BookingLink /><p>Answering · Qualification · Booking · Notifications</p></div>
         </div>
 
-        <div className="system-window" aria-label="Everward lead generation system">
+        <div className="system-window" aria-label="Everward AI receptionist workflow">
           <div className="window-bar"><span>EVERWARD / SYSTEM</span><span className="status"><i /> ACTIVE</span></div>
           <div className="system-flow">
             {heroStages.map((stage, index) => (
               <div className="flow-stage" key={stage}><span className="stage-number">0{index + 1}</span><strong>{stage}</strong>{index < heroStages.length - 1 && <span className="flow-line" aria-hidden="true" />}</div>
             ))}
           </div>
-          <div className="system-note"><span>Opportunity status</span><strong><i /> Ready for your team</strong></div>
+          <div className="system-note"><span>Call outcome</span><strong><i /> Appointment booked</strong></div>
         </div>
       </section>
 
       <section className="system-section" id="system">
         <div className="section-shell">
-          <div className="section-heading"><p className="section-index">01 / The system</p><h2>From ad click to estimate opportunity.</h2></div>
+          <div className="section-heading"><p className="section-index">01 / The system</p><h2>From missed call to booked appointment.</h2></div>
           <div className="process-track">
             {process.map((step) => (
               <article className="process-step" key={step.number}><div className="process-node"><span>{step.number}</span><i /></div><h3>{step.name}</h3><p>{step.text}</p></article>
             ))}
           </div>
-          <p className="section-footnote">One connected system. Clear handoff to your team.</p>
+          <p className="section-footnote">One connected workflow. Clear handoff to your team.</p>
         </div>
       </section>
 
       <section className="difference section-shell" id="difference">
         <div className="difference-copy">
           <p className="section-index">02 / The difference</p>
-          <h2>More than a list of names and phone numbers.</h2>
-          <p>Getting a lead isn’t the hard part. Turning that lead into a real conversation is. Everward combines acquisition with the infrastructure needed to qualify, follow up with and organize each opportunity.</p>
+          <h2>The demand is already there.</h2>
+          <p>Homeowners are already calling. When no one answers, they often move on to the next company. Everward helps you capture that existing demand by answering, qualifying and booking the call.</p>
         </div>
-        <div className="comparison" aria-label="Comparison of a typical lead service and Everward">
-          <div className="compare-row typical"><div><span>Typical lead service</span><b>Lead generated</b></div><span className="arrow">→</span><div><b>Name + number</b><small>Your team chases</small></div><span className="arrow">→</span><div><b>Lead goes cold</b></div></div>
-          <div className="compare-row everward"><div><span>Everward</span><b>Lead generated</b></div><span className="arrow">→</span><div><b>Qualified + contacted</b><small>Follow-up starts</small></div><span className="arrow">→</span><div><b>Estimate opportunity</b><small>Your team notified</small></div></div>
+        <div className="comparison" aria-label="Comparison of an unanswered call and an Everward call">
+          <div className="compare-row typical"><div><span>Without Everward</span><b>Call comes in</b></div><span className="arrow">→</span><div><b>No one answers</b><small>Voicemail or hang-up</small></div><span className="arrow">→</span><div><b>Homeowner moves on</b></div></div>
+          <div className="compare-row everward"><div><span>With Everward</span><b>Call comes in</b></div><span className="arrow">→</span><div><b>Answered + qualified</b><small>Calendar checked</small></div><span className="arrow">→</span><div><b>Appointment booked</b><small>Your team notified</small></div></div>
         </div>
       </section>
 
       <section className="handles-section" id="handles">
         <div className="section-shell">
-          <div className="handles-heading"><p className="section-index">03 / The handoff</p><h2>We build the front end.<br />Your team closes the work.</h2></div>
+          <div className="handles-heading"><p className="section-index">03 / The handoff</p><h2>We handle the missed call.<br />Your team handles the job.</h2></div>
           <div className="responsibility-grid">
             <article className="everward-list"><div className="list-title"><img className="brand-symbol" src="/favicon.png" width="28" height="28" alt="" /><h3>Everward handles</h3></div><ul>{everwardHandles.map((item) => <li key={item}><span>+</span>{item}</li>)}</ul></article>
-            <article className="contractor-list"><p className="list-kicker">Your team</p><h3>Focuses on what it does best.</h3><ol><li><span>01</span>Talk to qualified homeowners</li><li><span>02</span>Run estimates</li><li><span>03</span>Close replacement work</li></ol><p className="pilot-note"><i /> Performance-based, low-risk pilot structure.</p></article>
+            <article className="contractor-list"><p className="list-kicker">Your team</p><h3>Focuses on what it does best.</h3><ol><li><span>01</span>Review booked appointments</li><li><span>02</span>Visit the homeowner</li><li><span>03</span>Complete the work</li></ol><p className="pilot-note"><i /> Built around your existing call flow.</p></article>
           </div>
         </div>
       </section>
 
       <section className="final-cta" id="contact">
-        <div className="section-shell cta-inner"><p className="section-index">Start a conversation</p><h2>Want to see if it makes sense for your market?</h2><p>We’ll look at your service area, the replacement jobs you want more of and whether the Everward system is a fit.</p><BookingLink className="button button-accent" /></div>
+        <div className="section-shell cta-inner"><p className="section-index">Start a conversation</p><h2>Stop letting good calls go unanswered.</h2><p>See how Everward can fit into your current call flow, calendar and dispatch process.</p><BookingLink className="button button-accent" /></div>
       </section>
 
-      <footer className="site-footer"><div className="section-shell footer-grid"><div><a className="wordmark footer-wordmark" href="#top" aria-label="Everward home"><BrandLogo footer /></a><p>British Columbia, Canada</p></div><div className="footer-contact"><span>Direct contact</span><a href="mailto:hello@everward.ca">hello@everward.ca</a></div><div className="footer-meta"><span>© 2026 Everward</span><span aria-label="Legal pages forthcoming">Privacy · Terms</span></div></div></footer>
+      <footer className="site-footer"><div className="section-shell footer-grid"><div><a className="wordmark footer-wordmark" href="#top" aria-label="Everward home"><BrandLogo footer /></a><p>AI receptionist for residential HVAC.</p></div><div className="footer-contact"><span>Direct contact</span><a href="mailto:hello@everward.ca">hello@everward.ca</a></div><div className="footer-meta"><span>© 2026 Everward</span><span aria-label="Legal pages forthcoming">Privacy · Terms</span></div></div></footer>
     </main>
   );
 }
