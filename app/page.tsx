@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import { BOOKING_URL } from "@/lib/site-config";
-import Image from "next/image";
 
 const heroStages = ["Meta ads", "Homeowner", "Qualified", "Follow-up", "Estimate"];
 const process = [
@@ -15,7 +15,7 @@ function BookingLink({ className = "button", label = "Book a call" }: { classNam
 }
 
 function BrandLogo({ footer = false }: { footer?: boolean }) {
-  return <Image className={`brand-logo${footer ? " brand-logo-light" : ""}`} src="/everward-logo.png" width={214} height={45} alt="Everward" priority={!footer} />;
+  return <img className={`brand-logo${footer ? " brand-logo-light" : ""}`} src="/everward-logo.png" width="214" height="45" alt="Everward" />;
 }
 
 export default function Home() {
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="section-shell">
           <div className="handles-heading"><p className="section-index">03 / The handoff</p><h2>We build the front end.<br />Your team closes the work.</h2></div>
           <div className="responsibility-grid">
-            <article className="everward-list"><div className="list-title"><Image className="brand-symbol" src="/favicon.png" width={28} height={28} alt="" /><h3>Everward handles</h3></div><ul>{everwardHandles.map((item) => <li key={item}><span>+</span>{item}</li>)}</ul></article>
+            <article className="everward-list"><div className="list-title"><img className="brand-symbol" src="/favicon.png" width="28" height="28" alt="" /><h3>Everward handles</h3></div><ul>{everwardHandles.map((item) => <li key={item}><span>+</span>{item}</li>)}</ul></article>
             <article className="contractor-list"><p className="list-kicker">Your team</p><h3>Focuses on what it does best.</h3><ol><li><span>01</span>Talk to qualified homeowners</li><li><span>02</span>Run estimates</li><li><span>03</span>Close replacement work</li></ol><p className="pilot-note"><i /> Performance-based, low-risk pilot structure.</p></article>
           </div>
         </div>
